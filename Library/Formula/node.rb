@@ -24,6 +24,7 @@ class Node < Formula
       s.gsub! '/opt/local/lib', '/usr/lib'
     end
 
+    # Why skip npm install? Read https://github.com/mxcl/homebrew/pull/8784.
     args = ["--prefix=#{prefix}", "--without-npm"]
     args << "--debug" if ARGV.include? '--debug'
 
@@ -37,7 +38,7 @@ class Node < Formula
       installation:
         curl http://npmjs.org/install.sh | sh
 
-      After installing, add the following path to your NODE_PATH enviornment
+      After installing, add the following path to your NODE_PATH environment
       variable to have npm libraries picked up:
         #{HOMEBREW_PREFIX}/lib/node_modules
     EOS
