@@ -1,9 +1,9 @@
 require 'formula'
 
 class GambitScheme < Formula
-  url 'http://www.iro.umontreal.ca/~gambit/download/gambit/v4.6/source/gambc-v4_6_2.tgz'
+  url 'http://www.iro.umontreal.ca/~gambit/download/gambit/v4.6/source/gambc-v4_6_3.tgz'
   homepage 'http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page'
-  md5 'f6230a1f1f56b8113e0b9e391074bcb0'
+  md5 '420fbc5ad617c1d0a233d97b1d591528'
 
   def options
     [
