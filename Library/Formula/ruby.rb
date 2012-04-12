@@ -9,7 +9,9 @@ class Ruby < Formula
   depends_on 'readline'
   depends_on 'libyaml'
 
-  fails_with_llvm :build => 2326
+  fails_with :llvm do
+    build 2326
+  end
 
   # Stripping breaks dynamic linking
   skip_clean :all
@@ -42,8 +44,6 @@ class Ruby < Formula
     system "autoconf" unless File.exists? 'configure'
 
     args = ["--prefix=#{prefix}",
-            "--disable-debug",
-            "--disable-dependency-tracking",
             "--enable-shared"]
 
     args << "--program-suffix=19" if ARGV.include? "--with-suffix"
