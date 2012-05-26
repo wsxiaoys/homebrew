@@ -1,9 +1,9 @@
 require 'formula'
 
 class Peg < Formula
-  url 'http://piumarta.com/software/peg/peg-0.1.7.tar.gz'
   homepage 'http://piumarta.com/software/peg/'
-  md5 'e68a7b8d9ae11275242e84abd86c3258'
+  url 'http://piumarta.com/software/peg/peg-0.1.9.tar.gz'
+  md5 '26888aff55d5578b8eb2b3f42c4ed587'
 
   def install
     system "make all"
